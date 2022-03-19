@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BR Schedule</title>
+        <link rel="stylesheet" href="CSS/addstyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <h1>Assign student to studio</h1>
+        <p>Enter the fields bellow</p>
+
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" id="name" name="name">
+        <br>
+        <br>
+
+        <p>Assign to studio:</p>
+        <input type="radio" id="studio1" name="studio">
+        <label for="studio1">Studio 1</label>
+        <br>
+        <input type="radio" id="studio2" name="studio">
+        <label for="studio2">Studio 2</label>
+        <br>
+        <input type="radio" id="studio3" name="studio">
+        <label for="studio3">Studio 3</label>
+        <br>
+        <br>
+
+        <p>Start and end time</p>
+        <label for="time">Start time</label>
+        <input type="time" id="startTime" name="time">
+        <br>
+        <br>
+        <label for="time">End time</label>
+        <input type="time" id="endTime" name="time">
+        <br>
+        <br>
+        <input type="submit" class="submit" onclick="addSucess()" value="Submit">
+        <br>
+        <br>
+
+        <a href="home.html">
+            <button>Return to home</button>
+        </a>
+
+    </body>
+
+</html>

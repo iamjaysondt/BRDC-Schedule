@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BR Schedule</title>
+        <link rel="stylesheet" href="CSS/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Bali Rudiment studio allocation</h1>
+            <label id="lblGreetings"></label>
+            <span id = "clock" onload="currentTime()"></span>
+        </div>
+
+        <a href="index.html">
+            <button class="logout" id="logout"><img src="Icons/logout.png" height ="20" width="20"/></button>
+        </a>
+
+        <table class="center">
+
+            <tr>
+                <th>Time</th>
+                <th>Reymond</th>
+                <th>Aghi</th>
+                <th>Ola</th>
+                <th>Turah</th>
+                <th>Cepi</th>
+                <th>Samusu</th>
+                <th>Yogi</th>
+                <th>Santhi</th>
+                <th>Nova</th>
+                <th>Tirza</th>
+                <th>Novi</th>
+                <th>Werdha</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>Studio 4</th>
+                <th>Studio 1</th>
+                <th>Studio 2</th>
+                <th>Studio 4</th>
+                <th>Studio 4</th>
+                <th>Studio 5</th>
+                <th>Studio 2</th>
+                <th>Studio 3</th>
+                <th>Studio 3</th>
+                <th>Studio 3</th>
+                <th>Studio 6</th>
+                <th>Studio 6</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Time val</td>
+                <td>SDN i</td>
+                <td>SDN i</td>
+                <td>SDN i</td>
+                <td>SDN i</td>
+                <td>SDN i</td>
+                <td>SDN i</td>
+                <td>SDN i</td>
+                <td>SDN i</td>
+                <td>SDN i</td>
+                <td>SDN i</td>
+                <td>SDN i</td>
+                <td>SDN i</td>
+            </tr>
+        </table>
+
+        <a href="add.html">
+            <button class="add" id="add">+</button>
+        </a>
+
+        <script>
+            var myDate = new Date();
+            var hrs = myDate.getHours();
+        
+            var greet;
+        
+            if (hrs < 12)
+                greet = 'Good Morning';
+            else if (hrs >= 12 && hrs <= 17)
+                greet = 'Good Afternoon';
+            else if (hrs >= 17 && hrs <= 24)
+                greet = 'Good Evening';
+        
+            document.getElementById('lblGreetings').innerHTML = greet + '</b>. It is curently:';
+
+
+            function currentTime() {
+            let date = new Date(); 
+            let hh = date.getHours();
+            let mm = date.getMinutes();
+            let ss = date.getSeconds();
+            let session = "AM";
+
+            if(hh === 0){
+                hh = 12;
+            }
+            if(hh > 12){
+                hh = hh - 12;
+                session = "PM";
+            }
+
+            hh = (hh < 10) ? "0" + hh : hh;
+            mm = (mm < 10) ? "0" + mm : mm;
+            ss = (ss < 10) ? "0" + ss : ss;
+                
+            let time = hh + ":" + mm + ":" + ss + " " + session;
+
+            document.getElementById("clock").innerText = time; 
+            let t = setTimeout(function(){ currentTime() }, 1000);
+            }
+
+            currentTime();
+
+            tippy('#logout',{
+                content: 'Logout',
+            });
+
+            tippy('#add',{
+                content: 'Add student to table',
+                placement: 'bottom',
+            });
+        </script> 
+    </body>
+</html>

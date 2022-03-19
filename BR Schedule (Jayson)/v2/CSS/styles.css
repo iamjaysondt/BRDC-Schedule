@@ -1,0 +1,84 @@
+body{
+    background-color: rgb(202, 202, 202);
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+table{
+    border: 1px solid black;
+    margin-top: 10px;
+    table-layout: fixed;
+    width: 100%;
+    font-size: 10px;
+}
+
+th{
+    padding: 5px;
+    background-color: rgb(177, 177, 177);
+    height: 10px;
+}
+
+td{
+    padding: 5px;
+    background-color: rgb(194, 194, 194);
+    width: 25%;
+    height: 10px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Button*/
+/*.ripple{
+    background-position: center;
+    transition: background 0.8s;
+  }
+  .ripple:hover {
+    background: #696969 radial-gradient(circle, transparent 1%, #696969 1%) center/15000%;
+  }
+  .ripple:active {
+    background-color: #bbbbbb;
+    background-size: 100%;
+    transition: background 0s;
+  }
+*/
+
+.add{
+    border: none;
+    border-radius: 2px;
+    padding: 12px 18px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(155, 155, 155);
+    box-shadow: 0 0 4px #999;
+    outline: none;
+    margin-top: 20px;
+  }
+
+.copyright{
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 200px; /* Need a specific value to work */
+}
+
+.logout{
+  position: absolute;
+  right: 20px;
+  bottom: 578px;
+  background-color: #999;
+  padding: 15px;
+  border-radius: 50%;
+  border: none;
+}
+
+.header{
+  margin-top: 39px;
+}
